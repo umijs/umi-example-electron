@@ -1,5 +1,7 @@
 # umi-example-electron
 
+> WIP: 基于 umi@master 分支可用，或等 umi@1.3.6 发布。
+
 Electron example with [umi](https://github.com/umijs/umi/) and [dva](https://github.com/dvajs/dva/).
 
 ## 参考
@@ -37,6 +39,12 @@ $ npm run dev
 
 ```bash
 $ npm run pack
+
+# 不打 dmg、exe 包，本地验证时用
+$ npm run pack:dir
+
+# 不重复做 webpack 层的构建和 rebuild，本地验证打包流程用
+$ npm run pack:dirOnly
 ```
 
 ## 目录结构
@@ -61,3 +69,4 @@ $ npm run pack
 * /src/main -> /app/dist/main，是基于 roadhog 打包
 * /src/renderer -> /app/dist/renderer，是基于 umi 做打包
 * /webpack.config.js 等 roadhog 支持 APP_ROOT 环境变量之后会迁到 /src/main 下
+
