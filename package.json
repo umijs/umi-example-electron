@@ -1,0 +1,40 @@
+{
+  "private": true,
+  "author": {
+    "name": "chencheng",
+    "email": "sorrycc@gmail.com"
+  },
+  "build": {
+    "files": [
+      "./dist/**/*",
+      "./pages/**/*",
+      "./node_modules/**/*"
+    ],
+    "appId": "com.sorrycc.umi-example-electron",
+    "asar": false
+  },
+  "scripts": {
+    "start": "electron app/dist/main/index",
+    "dev": "concurrently \"npm run dev:renderer\" \"npm run dev:main\"",
+    "dev:main": "ESLINT=none BROWSER=none COMPRESS=none roadhog build -w",
+    "dev:renderer": "APP_ROOT=src/renderer ESLINT=none umi dev",
+    "build": "npm run build:main && npm run build:renderer",
+    "build:main": "ESLINT=none roadhog build",
+    "build:renderer": "APP_ROOT=src/renderer ESLINT=none umi build",
+    "pack": "npm run build && npm run rebuild && build",
+    "pack:dir": "npm run build && npm run rebuild && build --dir",
+    "pack:dirOnly": "build --dir",
+    "rebuild": "electron-rebuild -m ./app"
+  },
+  "devDependencies": {
+    "@babel/runtime": "^7.0.0-beta.49",
+    "concurrently": "^3.5.1",
+    "electron": "^2.0.2",
+    "electron-builder": "^20.15.1",
+    "electron-debug": "^2.0.0",
+    "electron-rebuild": "^1.7.3",
+    "roadhog": "^2.4.2",
+    "umi": "^1.3.5",
+    "umi-plugin-dva": "^0.9.0"
+  }
+}
