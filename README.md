@@ -47,6 +47,10 @@ $ npm run pack:dir
 $ npm run pack:dirOnly
 ```
 
+## 截图
+
+<img src="https://gw.alipayobjects.com/zos/rmsportal/miqYnMkzqlwpdRjuUHsq.png" width="600" />
+
 ## 目录结构
 
 采用 [Two package.json Structure](https://www.electron.build/tutorials/two-package-structure)，之后可能会切到 Single package.json Structure 。

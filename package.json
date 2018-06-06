@@ -14,10 +14,10 @@
     "asar": false
   },
   "scripts": {
-    "start": "electron app/dist/main/index",
+    "start": "electron app/dist/main/main",
     "dev": "concurrently \"npm run dev:renderer\" \"npm run dev:main\"",
     "dev:main": "ESLINT=none BROWSER=none COMPRESS=none roadhog build -w",
-    "dev:renderer": "APP_ROOT=src/renderer ESLINT=none umi dev",
+    "dev:renderer": "APP_ROOT=src/renderer BROWSER=none ESLINT=none umi dev",
     "build": "npm run build:main && npm run build:renderer",
     "build:main": "ESLINT=none roadhog build",
     "build:renderer": "APP_ROOT=src/renderer ESLINT=none umi build",
