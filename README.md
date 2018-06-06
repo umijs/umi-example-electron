@@ -74,3 +74,8 @@ $ npm run pack:dirOnly
 * /src/renderer -> /app/dist/renderer，是基于 umi 做打包
 * /webpack.config.js 等 roadhog 支持 APP_ROOT 环境变量之后会迁到 /src/main 下
 
+## FAQ
+
+### 如何在 renderer 端引用 electron、node 原生模块、以及 app 里的依赖？
+
+直接 import 就好，已处理好 externals。
