@@ -49,7 +49,7 @@ $ npm run pack:dirOnly
 
 ## 截图
 
-<img src="https://gw.alipayobjects.com/zos/rmsportal/miqYnMkzqlwpdRjuUHsq.png" width="600" />
+<img src="https://gw.alipayobjects.com/zos/rmsportal/pOdHompgpiVoQLgLKzkY.png" width="600" />
 
 ## 目录结构
 
