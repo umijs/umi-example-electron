@@ -1,9 +1,8 @@
 import { join } from 'path';
-import webpack from 'roadhog/webpack';
 
 const cwd = process.cwd();
 
-export default function (webpackConfig) {
+export default function (webpackConfig, { webpack }) {
   webpackConfig.entry = {
     main: './src/main/index.js',
   };
