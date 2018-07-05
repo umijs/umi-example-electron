@@ -1,7 +1,5 @@
 # umi-example-electron
 
-> WIP: 基于 umi@master 分支可用，或等 umi@1.3.6 发布。
-
 Electron example with [umi](https://github.com/umijs/umi/) and [dva](https://github.com/dvajs/dva/).
 
 ## 参考
