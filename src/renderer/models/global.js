@@ -2,6 +2,6 @@ export default {
   namespace: 'global',
 
   state: {
-    test: ''
+    count: 1
   }
 }
