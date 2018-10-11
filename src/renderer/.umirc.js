@@ -2,15 +2,16 @@ import { join } from 'path';
 import slash from 'slash';
 
 export default {
-  disableServiceWorker: true,
   disableDynamicImport: true,
-  hashHistory: true,
   publicPath: './static/',
   outputPath: '../../app/dist/renderer',
   plugins: [
-    ['umi-plugin-dva', {
-      immer: true,
-    }],
+    [
+      'umi-plugin-react',
+      {
+        dva: true
+      }
+    ]
   ],
   externals(context, request, callback) {
     const isDev = process.env.NODE_ENV === 'development';
