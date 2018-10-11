@@ -1,4 +1,5 @@
 {
+  "name": "umi-example-electron",
   "private": true,
   "author": {
     "name": "chencheng",
@@ -14,6 +15,7 @@
     "asar": false
   },
   "scripts": {
+    "bootstrap": "yarn || npm i",
     "start": "electron app/dist/main/main",
     "dev": "concurrently \"npm run dev:renderer\" \"npm run dev:main\"",
     "dev:main": "ESLINT=none BROWSER=none COMPRESS=none roadhog build -w",
@@ -27,7 +29,7 @@
     "rebuild": "electron-rebuild -m ./app"
   },
   "devDependencies": {
-    "@babel/runtime": "^7.0.0-beta.49",
+    "@babel/runtime": "^7.1.2",
     "concurrently": "^3.5.1",
     "electron": "^2.0.2",
     "electron-builder": "^20.15.1",
