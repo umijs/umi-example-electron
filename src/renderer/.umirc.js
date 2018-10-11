@@ -1,6 +1,3 @@
-import { join } from 'path';
-import slash from 'slash';
-
 export default {
   disableDynamicImport: true,
   publicPath: './static/',
@@ -14,7 +11,6 @@ export default {
     ]
   ],
   externals(context, request, callback) {
-    const isDev = process.env.NODE_ENV === 'development';
     let isExternal = false;
     const load = [
       'electron',
@@ -26,12 +22,6 @@ export default {
     ];
     if (load.includes(request)) {
       isExternal = `require("${request}")`;
-    }
-    const appDeps = Object.keys(require('../../app/package').dependencies);
-    if (appDeps.includes(request)) {
-      const orininalPath = slash(join(__dirname, '../../app/node_modules', request));
-      const requireAbsolute = `require('${orininalPath}')`;
-      isExternal = isDev ? requireAbsolute : `require('${request}')`;
     }
     callback(null, isExternal);
   },
