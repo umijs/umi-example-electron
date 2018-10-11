@@ -5,7 +5,7 @@ export default connect(state => ({
   g: state.g,
 }))((props) =>
   <div style={{ textAlign: 'center' }}>
-    <h1>Yay! Welcome to umi and dva!</h1>
+    <h1>Yay! Welcome to umi!</h1>
     <h2>Data Test: {props.g}</h2>
     <h2>is.osx(): {JSON.stringify(is.osx())}</h2>
     <br /><br />
