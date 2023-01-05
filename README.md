@@ -1,6 +1,6 @@
-# Umi@4 Excample Electron
+# Umi@4 Example Electron
 
-![](https://img.shields.io/badge/Umi@4.Excample.Electron-1.0.0-blue.svg) ![][david-url]
+![](https://img.shields.io/badge/Umi@4.Example.Electron-1.0.0-blue.svg) ![][david-url]
 
 Electron example with [umijs@4](https://umijs.org/)
 
